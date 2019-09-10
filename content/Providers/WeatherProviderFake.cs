@@ -32,6 +32,7 @@ namespace Vue2Spa.Providers
         public List<WeatherForecast> GetForecasts()
         {
             return WeatherForecasts;
+            
         }
     }
 }
