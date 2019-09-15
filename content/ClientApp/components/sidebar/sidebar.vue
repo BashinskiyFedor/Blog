@@ -1,10 +1,8 @@
 <template>
-  <div class="navbar navbar-vertical navbar-light bg-dark">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <slot name="links">
-        </slot>
-      </li>
+  <div class="navbar navbar-expand navbar-vertical navbar-dark bg-dark">
+    <ul class="navbar-nav align-items-center">
+      <slot name="links">
+      </slot>
     </ul>
   </div>
 </template>

@@ -3,13 +3,13 @@
         :class="[
         {[`bg-gradient-${gradient}`]:gradient}
         ]">
-    <div class="card-header">
+    <div class="card-header" v-if="$slots.header">
       <slot name="header"></slot>
     </div>
     <div class="card-body">
-      <slot name="body"></slot>
+      <slot></slot>
     </div>
-    <div class="card-footer">
+    <div class="card-footer" v-if="$slots.footer">
       <slot name="footer"></slot>
     </div>
   </div>
@@ -17,11 +17,12 @@
 
 <script>
 export default {
-  name: 'card',
+  name: "card",
   props: {
     gradient: {
       type: String,
-      description: "Card background"
+      description: "Card background",
+      default: "dark"
     }
   }
 }

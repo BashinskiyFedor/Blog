@@ -2,8 +2,10 @@
   <card class="stats-card">
     <div class="row">
       <div class="col">
-        <h5 class="text-uppercase card-title text-muted" v-if="title">{{title}}</h5>
-        <span class="h2 font-weight-bold mb-0"></span>
+        <slot>
+          <h5 class="text-uppercase card-title text-muted">{{title}}</h5>
+          <span class="h2 font-weight-bold mb-0">{{subtitle}}</span>
+        </slot>
       </div>
       <div class="col-auto" v-if="icon">
         <div class="icon icon-shape text-white rounded-circle shadow"
